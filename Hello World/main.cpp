@@ -9,7 +9,10 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
+    int x= 10;
     // insert code here...
-    std::cout << "Hello, World!\n";
+    std::cout << "My name is gaurav sharma\n";
+    std::cout << x ;
+    std::cout << "\n";
     return 0;
 }
