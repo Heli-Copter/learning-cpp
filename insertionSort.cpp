@@ -8,13 +8,12 @@ void insertionSort (int arr[], int n) {
     for(int i = 1; i < n ; i++) {
         int value = arr[i];
         int position = i;
-        for(int j = 0; j < i; j++) {
-            if(value > arr[j] && value <= arr[j+1]) {
-                int nextVal = arr[j+1];
-                position = j;
-            }
+        int j = i;
+        while(j > 0 && arr [j -1] > value) {
+            arr[j] = arr[j - 1];
+            j--;
         }
-        arr[position] = value;
+        arr[j] = value;
     }
 }
 
