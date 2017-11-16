@@ -4,12 +4,15 @@
 
 #include <iostream>
 
-void insertionSort (int arr[], int n) {
-    for(int i = 1; i < n ; i++) {
+void insertionSort(int arr[], int n)
+{
+    for (int i = 1; i < n; i++)
+    {
         int value = arr[i];
         int position = i;
         int j = i;
-        while(j > 0 && arr [j -1] > value) {
+        while (j > 0 && arr[j - 1] > value)
+        {
             arr[j] = arr[j - 1];
             j--;
         }
@@ -17,15 +20,18 @@ void insertionSort (int arr[], int n) {
     }
 }
 
-void printArray (int arr[], int n) {
-    for(int i = 0; i < n; i++) {
+void printArray(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
         std::cout << arr[i] << " ";
     }
 }
 
-int main() {
+int main()
+{
     int arr[] = {3, 8, 5, 4, 1, 9, -2};
-    int n = sizeof(arr)/sizeof(*arr);
+    int n = sizeof(arr) / sizeof(*arr);
     insertionSort(arr, n);
     printArray(arr, n);
     return 0;
